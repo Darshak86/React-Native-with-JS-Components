@@ -23,7 +23,7 @@ const index = () => {
           component={HomeScreen}
         />
         <Stack.Screen
-          options={{ title: "Text_Demo" }}
+          options={({ route }) => ({ title: route.params.name })}
           name="Text"
           component={Text_Demo}
         />
