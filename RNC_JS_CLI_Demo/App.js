@@ -1,12 +1,9 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import Index from './constant/Index';
 
 const App = () => {
-  return (
-    <View>
-      <Text>WelCome To React Native World..!!</Text>
-    </View>
-  )
+  return <Index />;
 }
 
 export default App
