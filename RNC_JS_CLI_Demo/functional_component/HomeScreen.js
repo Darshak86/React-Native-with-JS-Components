@@ -6,22 +6,45 @@ import {
   TouchableWithoutFeedback
 } from "react-native";
 import React from "react";
-import {DATA} from "../constant/componentListArroy";
+import { DATA } from "../constant/componentListArroy";
 
 const HomeScreen = ({ navigation }) => {
   //function to go to next screen
   const goToNextScreen = (id, title) => {
     // console.log(id);
     // console.log(title);
-    return navigation.push("Text", {title: `${title}` ,name : `${title}`});
+    if (id == 0) {
+      return navigation.push("Functional_component", {
+        title: `${title}`,
+        name: `${title}`
+      });
+    } else if (id == 1) {
+      return navigation.push("Class_Component", {
+        title: `${title}`,
+        name: `${title}`
+      });
+    } else {
+      return navigation.push("Text", {
+        title: `${title}`,
+        name: `${title}`
+      });
+    }
   };
-  return <View style={styles.container}>
-      <FlatList data={DATA} renderItem={({ item, index }) => <TouchableWithoutFeedback onPress={() => goToNextScreen(index, item.title)}>
+  return (
+    <View style={styles.container}>
+      <FlatList
+        data={DATA}
+        renderItem={({ item, index }) =>
+          <TouchableWithoutFeedback
+            onPress={() => goToNextScreen(index, item.title)}
+          >
             <Text style={styles.item}>
-              ({index+1})  {item.title}
+              ({index + 1}) {item.title}
             </Text>
-          </TouchableWithoutFeedback>} />
-    </View>;
+          </TouchableWithoutFeedback>}
+      />
+    </View>
+  );
 };
 
 const styles = StyleSheet.create({
