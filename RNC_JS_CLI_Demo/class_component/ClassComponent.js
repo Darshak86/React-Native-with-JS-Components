@@ -1,7 +1,7 @@
 import { Text, StyleSheet, View } from "react-native";
 import React, { Component } from "react";
 
-export default class ClassComponent_Demo extends Component {
+export default class ClassComponent extends Component {
 
    constructor() {
     super();
