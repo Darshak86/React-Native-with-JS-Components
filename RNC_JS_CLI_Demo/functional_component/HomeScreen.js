@@ -85,6 +85,36 @@ const HomeScreen = ({ navigation }) => {
         title: `${title}`,
         name: `${title}`
       });
+    } else if (id == 14) {
+      return navigation.push("ScreenDimensions", {
+        title: `${title}`,
+        name: `${title}`
+      });
+    } else if (id == 15) {
+      return navigation.push("PlatformSpecific", {
+        title: `${title}`,
+        name: `${title}`
+      });
+    } else if (id == 16) {
+      return navigation.push("ViewBoxesWithColorAndText", {
+        title: `${title}`,
+        name: `${title}`
+      });
+    } else if (id == 17) {
+      return navigation.push("SafeAreaViewScreen", {
+        title: `${title}`,
+        name: `${title}`
+      });
+    } else if (id == 18) {
+      return navigation.push("CardViewScreen", {
+        title: `${title}`,
+        name: `${title}`
+      });
+    } else if (id == 19) {
+      return navigation.push("GradientComponent", {
+        title: `${title}`,
+        name: `${title}`
+      });
     } else {
       return navigation.push("TextView", {
         title: `${title}`,
@@ -123,14 +153,14 @@ const styles = StyleSheet.create({
     color: getColor("BLACK"),
     shadowColor: getColor("BLACK"),
     shadowOffset: {
-      width: 0,
-      height: 2
+      width: 1,
+      height: 1
     },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.05,
-    elevation: 5,
-    borderRadius: 10,
-    fontSize: fontSize(16),
+    shadowOpacity: 0.3,
+    shadowRadius: 3,
+    elevation: 3,
+    borderRadius: 6,
+    fontSize: fontSize(14),
     fontFamily: fontFamily.POP_SBOLD
   }
 });

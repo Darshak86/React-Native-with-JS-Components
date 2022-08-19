@@ -17,6 +17,12 @@ import FlexWrapLayout from "../functional_component/FlexWrapLayout";
 import PositionLayout from "../functional_component/PositionLayout";
 import JustifyContentBasics from "../functional_component/JustifyContentBasics";
 import WidthHeightBasics from "../functional_component/WidthHeightBasics";
+import ScreenDimensions from "../functional_component/ScreenDimensions";
+import PlatformSpecific from "../functional_component/PlatformSpecific";
+import ViewBoxesWithColorAndText from "../functional_component/ViewBoxesWithColorAndText";
+import SafeAreaViewScreen from "../functional_component/SafeAreaViewScreen";
+import CardViewScreen from "../functional_component/CardViewScreen";
+import GradientComponent from "../functional_component/GradientComponent";
 import screens from "../config/screens";
 
 const index = () => {
@@ -105,6 +111,36 @@ const index = () => {
           options={({ route }) => ({ title: route.params.name })}
           name="WidthHeightBasics"
           component={WidthHeightBasics}
+        />
+        <Stack.Screen
+          options={({ route }) => ({ title: route.params.name })}
+          name="ScreenDimensions"
+          component={ScreenDimensions}
+        />
+        <Stack.Screen
+          options={({ route }) => ({ title: route.params.name })}
+          name="PlatformSpecific"
+          component={PlatformSpecific}
+        />
+        <Stack.Screen
+          options={({ route }) => ({ title: route.params.name })}
+          name="ViewBoxesWithColorAndText"
+          component={ViewBoxesWithColorAndText}
+        />
+        <Stack.Screen
+          options={({ route }) => ({ title: route.params.name })}
+          name="SafeAreaViewScreen"
+          component={SafeAreaViewScreen}
+        />
+        <Stack.Screen
+          options={({ route }) => ({ title: route.params.name })}
+          name="CardViewScreen"
+          component={CardViewScreen}
+        />
+        <Stack.Screen
+          options={({ route }) => ({ title: route.params.name })}
+          name="GradientComponent"
+          component={GradientComponent}
         />
       </Stack.Navigator>
     </NavigationContainer>
