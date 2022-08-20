@@ -3,6 +3,7 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HomeScreen from "../functional_component/HomeScreen";
+import DefaultScreen from "../functional_component/DefaultScreen";
 import TextView from "../functional_component/TextView";
 import FunctionalComponent from "../functional_component/FunctionalComponent";
 import ClassComponent from "../class_component/ClassComponent";
@@ -23,6 +24,10 @@ import ViewBoxesWithColorAndText from "../functional_component/ViewBoxesWithColo
 import SafeAreaViewScreen from "../functional_component/SafeAreaViewScreen";
 import CardViewScreen from "../functional_component/CardViewScreen";
 import GradientComponent from "../functional_component/GradientComponent";
+import AccessibilityInfoDemo from "../functional_component/AccessibilityInfoDemo";
+import TextInputComponent from "../functional_component/TextInputComponent";
+import KeyboardAvoidingComponent from "../functional_component/KeyboardAvoidingComponent";
+import KeyboardComponent from "../functional_component/KeyboardComponent";
 import screens from "../config/screens";
 
 const index = () => {
@@ -41,6 +46,11 @@ const index = () => {
           options={{ title: "Components List" }}
           name="Home"
           component={HomeScreen}
+        />
+        <Stack.Screen
+          options={({ route }) => ({ title: route.params.name })}
+          name="DefaultScreen"
+          component={DefaultScreen}
         />
         <Stack.Screen
           options={({ route }) => ({ title: route.params.name })}
@@ -141,6 +151,26 @@ const index = () => {
           options={({ route }) => ({ title: route.params.name })}
           name="GradientComponent"
           component={GradientComponent}
+        />
+        <Stack.Screen
+          options={({ route }) => ({ title: route.params.name })}
+          name="AccessibilityInfoDemo"
+          component={AccessibilityInfoDemo}
+        />
+        <Stack.Screen
+          options={({ route }) => ({ title: route.params.name })}
+          name="TextInputComponent"
+          component={TextInputComponent}
+        />
+        <Stack.Screen
+          options={({ route }) => ({ title: route.params.name })}
+          name="KeyboardAvoidingComponent"
+          component={KeyboardAvoidingComponent}
+        />
+        <Stack.Screen
+          options={({ route }) => ({ title: route.params.name })}
+          name="KeyboardComponent"
+          component={KeyboardComponent}
         />
       </Stack.Navigator>
     </NavigationContainer>

@@ -115,8 +115,33 @@ const HomeScreen = ({ navigation }) => {
         title: `${title}`,
         name: `${title}`
       });
-    } else {
+    } else if (id == 20) {
       return navigation.push("TextView", {
+        title: `${title}`,
+        name: `${title}`
+      });
+    } else if (id == 21) {
+      return navigation.push("AccessibilityInfoDemo", {
+        title: `${title}`,
+        name: `${title}`
+      });
+    } else if (id == 22) {
+      return navigation.push("TextInputComponent", {
+        title: `${title}`,
+        name: `${title}`
+      });
+    } else if (id == 23) {
+      return navigation.push("KeyboardAvoidingComponent", {
+        title: `${title}`,
+        name: `${title}`
+      });
+    } else if (id == 24) {
+      return navigation.push("KeyboardComponent", {
+        title: `${title}`,
+        name: `${title}`
+      });
+    } else {
+      return navigation.push("DefaultScreen", {
         title: `${title}`,
         name: `${title}`
       });
