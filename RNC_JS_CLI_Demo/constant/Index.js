@@ -28,6 +28,14 @@ import AccessibilityInfoDemo from "../functional_component/AccessibilityInfoDemo
 import TextInputComponent from "../functional_component/TextInputComponent";
 import KeyboardAvoidingComponent from "../functional_component/KeyboardAvoidingComponent";
 import KeyboardComponent from "../functional_component/KeyboardComponent";
+import ButtonComponent from "../functional_component/ButtonComponent";
+import CheckBoxComponent from "../functional_component/CheckBoxComponent";
+import RadioButtonComponent from "../functional_component/RadioButtonComponent";
+import TouchableOpacityComponent from "../functional_component/TouchableOpacityComponent";
+import TouchableWithoutFeedbackComponent from "../functional_component/TouchableWithoutFeedbackComponent";
+import TouchableHighlightComponent from "../functional_component/TouchableHighlightComponent";
+import PressableComponent from "../functional_component/PressableComponent";
+import TimerComponent from "../functional_component/TimerComponent";
 import screens from "../config/screens";
 
 const index = () => {
@@ -171,6 +179,46 @@ const index = () => {
           options={({ route }) => ({ title: route.params.name })}
           name="KeyboardComponent"
           component={KeyboardComponent}
+        />
+        <Stack.Screen
+          options={({ route }) => ({ title: route.params.name })}
+          name="ButtonComponent"
+          component={ButtonComponent}
+        />
+        <Stack.Screen
+          options={({ route }) => ({ title: route.params.name })}
+          name="CheckBoxComponent"
+          component={CheckBoxComponent}
+        />
+        <Stack.Screen
+          options={({ route }) => ({ title: route.params.name })}
+          name="RadioButtonComponent"
+          component={RadioButtonComponent}
+        />
+        <Stack.Screen
+          options={({ route }) => ({ title: route.params.name })}
+          name="TouchableOpacityComponent"
+          component={TouchableOpacityComponent}
+        />
+        <Stack.Screen
+          options={({ route }) => ({ title: route.params.name })}
+          name="TouchableHighlightComponent"
+          component={TouchableHighlightComponent}
+        />
+        <Stack.Screen
+          options={({ route }) => ({ title: route.params.name })}
+          name="TouchableWithoutFeedbackComponent"
+          component={TouchableWithoutFeedbackComponent}
+        />
+        <Stack.Screen
+          options={({ route }) => ({ title: route.params.name })}
+          name="PressableComponent"
+          component={PressableComponent}
+        />
+        <Stack.Screen
+          options={({ route }) => ({ title: route.params.name })}
+          name="TimerComponent"
+          component={TimerComponent}
         />
       </Stack.Navigator>
     </NavigationContainer>

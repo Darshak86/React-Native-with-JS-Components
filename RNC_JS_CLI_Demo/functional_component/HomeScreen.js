@@ -140,6 +140,46 @@ const HomeScreen = ({ navigation }) => {
         title: `${title}`,
         name: `${title}`
       });
+    } else if (id == 25) {
+      return navigation.push("ButtonComponent", {
+        title: `${title}`,
+        name: `${title}`
+      });
+    } else if (id == 26) {
+      return navigation.push("CheckBoxComponent", {
+        title: `${title}`,
+        name: `${title}`
+      });
+    } else if (id == 27) {
+      return navigation.push("RadioButtonComponent", {
+        title: `${title}`,
+        name: `${title}`
+      });
+    } else if (id == 28) {
+      return navigation.push("TouchableOpacityComponent", {
+        title: `${title}`,
+        name: `${title}`
+      });
+    } else if (id == 29) {
+      return navigation.push("TouchableHighlightComponent", {
+        title: `${title}`,
+        name: `${title}`
+      });
+    } else if (id == 30) {
+      return navigation.push("TouchableWithoutFeedbackComponent", {
+        title: `${title}`,
+        name: `${title}`
+      });
+    } else if (id == 31) {
+      return navigation.push("PressableComponent", {
+        title: `${title}`,
+        name: `${title}`
+      });
+    } else if (id == 32) {
+      return navigation.push("TimerComponent", {
+        title: `${title}`,
+        name: `${title}`
+      });
     } else {
       return navigation.push("DefaultScreen", {
         title: `${title}`,

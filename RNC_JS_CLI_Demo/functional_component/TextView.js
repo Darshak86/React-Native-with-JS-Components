@@ -13,15 +13,6 @@ const TextView = () => {
   const onTextLayout = useCallback(e => {
     setLengthMore(e.nativeEvent.lines.length >= 3);
   }, []);
-
-  const showAlert = () => {
-    return Alert.alert("Alert Title", "My Alert Msg", [
-      {
-        text: "Cancel",
-        style: "cancel"
-      }
-    ]);
-  };
   return (
     <View style={styles.container}>
       <ScrollView>
@@ -104,14 +95,14 @@ const TextView = () => {
         <Text style={{ color: getColor("BLACK"), marginTop: 16 }}>
           By signing up, you agree to
           <Text
-            onPress={() => showAlert()}
+            onPress={() => Alert.alert("Terms and Conditions Clicked...!!")}
             style={{ fontWeight: "bold", color: getColor("T_BLUE") }}
           >
             {" "}Terms and Conditions{" "}
           </Text>
           <Text style={{ color: getColor("BLACK") }}>and</Text>
           <Text
-            onPress={() => showAlert()}
+            onPress={() => Alert.alert("Privacy Policy Clicked...!!")}
             style={{ fontWeight: "bold", color: getColor("T_BLUE") }}
           >
             {" "}Privacy Policy{" "}
