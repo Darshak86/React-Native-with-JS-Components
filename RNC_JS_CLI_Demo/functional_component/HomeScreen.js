@@ -180,6 +180,51 @@ const HomeScreen = ({ navigation }) => {
         title: `${title}`,
         name: `${title}`
       });
+    } else if (id == 33) {
+      return navigation.push("SwitchComponent", {
+        title: `${title}`,
+        name: `${title}`
+      });
+    } else if (id == 34) {
+      return navigation.push("DisplayAnImage", {
+        title: `${title}`,
+        name: `${title}`
+      });
+    } else if (id == 35) {
+      return navigation.push("ImageBackgroundComponent", {
+        title: `${title}`,
+        name: `${title}`
+      });
+    } else if (id == 36) {
+      return navigation.push("CustomIconComponent", {
+        title: `${title}`,
+        name: `${title}`
+      });
+    } else if (id == 37) {
+      return navigation.push("PickerComponent", {
+        title: `${title}`,
+        name: `${title}`
+      });
+    } else if (id == 38) {
+      return navigation.push("DateAndTimePickerComponent", {
+        title: `${title}`,
+        name: `${title}`
+      });
+    } else if (id == 39) {
+      return navigation.push("GetCurrentDateTime", {
+        title: `${title}`,
+        name: `${title}`
+      });
+    } else if (id == 40) {
+      return navigation.push("SliderComponent", {
+        title: `${title}`,
+        name: `${title}`
+      });
+    } else if (id == 41) {
+      return navigation.push("WebViewComponent", {
+        title: `${title}`,
+        name: `${title}`
+      });
     } else {
       return navigation.push("DefaultScreen", {
         title: `${title}`,

@@ -36,6 +36,15 @@ import TouchableWithoutFeedbackComponent from "../functional_component/Touchable
 import TouchableHighlightComponent from "../functional_component/TouchableHighlightComponent";
 import PressableComponent from "../functional_component/PressableComponent";
 import TimerComponent from "../functional_component/TimerComponent";
+import SwitchComponent from "../functional_component/SwitchComponent";
+import DisplayAnImage from "../functional_component/DisplayAnImage";
+import ImageBackgroundComponent from "../functional_component/ImageBackgroundComponent";
+import CustomIconComponent from "../functional_component/CustomIconComponent";
+import PickerComponent from "../functional_component/PickerComponent";
+import DateAndTimePickerComponent from "../functional_component/DateAndTimePickerComponent";
+import GetCurrentDateTime from "../functional_component/GetCurrentDateTime";
+import SliderComponent from "../functional_component/SliderComponent";
+import WebViewComponent from "../functional_component/WebViewComponent";
 import screens from "../config/screens";
 
 const index = () => {
@@ -219,6 +228,51 @@ const index = () => {
           options={({ route }) => ({ title: route.params.name })}
           name="TimerComponent"
           component={TimerComponent}
+        />
+        <Stack.Screen
+          options={({ route }) => ({ title: route.params.name })}
+          name="SwitchComponent"
+          component={SwitchComponent}
+        />
+        <Stack.Screen
+          options={({ route }) => ({ title: route.params.name })}
+          name="DisplayAnImage"
+          component={DisplayAnImage}
+        />
+        <Stack.Screen
+          options={({ route }) => ({ title: route.params.name })}
+          name="ImageBackgroundComponent"
+          component={ImageBackgroundComponent}
+        />
+        <Stack.Screen
+          options={({ route }) => ({ title: route.params.name })}
+          name="CustomIconComponent"
+          component={CustomIconComponent}
+        />
+        <Stack.Screen
+          options={({ route }) => ({ title: route.params.name })}
+          name="PickerComponent"
+          component={PickerComponent}
+        />
+        <Stack.Screen
+          options={({ route }) => ({ title: route.params.name })}
+          name="DateAndTimePickerComponent"
+          component={DateAndTimePickerComponent}
+        />
+        <Stack.Screen
+          options={({ route }) => ({ title: route.params.name })}
+          name="GetCurrentDateTime"
+          component={GetCurrentDateTime}
+        />
+        <Stack.Screen
+          options={({ route }) => ({ title: route.params.name })}
+          name="SliderComponent"
+          component={SliderComponent}
+        />
+        <Stack.Screen
+          options={({ route }) => ({ title: route.params.name })}
+          name="WebViewComponent"
+          component={WebViewComponent}
         />
       </Stack.Navigator>
     </NavigationContainer>
