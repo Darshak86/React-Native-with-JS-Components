@@ -225,6 +225,31 @@ const HomeScreen = ({ navigation }) => {
         title: `${title}`,
         name: `${title}`
       });
+    } else if (id == 42) {
+      return navigation.push("AlertComponent", {
+        title: `${title}`,
+        name: `${title}`
+      });
+    } else if (id == 43) {
+      return navigation.push("ToastAndroidComponent", {
+        title: `${title}`,
+        name: `${title}`
+      });
+    } else if (id == 44) {
+      return navigation.push("ShareComponent", {
+        title: `${title}`,
+        name: `${title}`
+      });
+    } else if (id == 45) {
+      return navigation.push("ImageSliderComponent", {
+        title: `${title}`,
+        name: `${title}`
+      });
+    } else if (id == 46) {
+      return navigation.push("CarouselImageSliderComponent", {
+        title: `${title}`,
+        name: `${title}`
+      });
     } else {
       return navigation.push("DefaultScreen", {
         title: `${title}`,

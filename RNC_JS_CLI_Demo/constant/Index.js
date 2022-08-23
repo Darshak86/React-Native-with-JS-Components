@@ -45,6 +45,11 @@ import DateAndTimePickerComponent from "../functional_component/DateAndTimePicke
 import GetCurrentDateTime from "../functional_component/GetCurrentDateTime";
 import SliderComponent from "../functional_component/SliderComponent";
 import WebViewComponent from "../functional_component/WebViewComponent";
+import AlertComponent from "../functional_component/AlertComponent";
+import ToastAndroidComponent from "../functional_component/ToastAndroidComponent";
+import ShareComponent from "../functional_component/ShareComponent";
+import ImageSliderComponent from "../functional_component/ImageSliderComponent";
+import CarouselImageSliderComponent from "../functional_component/CarouselImageSliderComponent";
 import screens from "../config/screens";
 
 const index = () => {
@@ -273,6 +278,31 @@ const index = () => {
           options={({ route }) => ({ title: route.params.name })}
           name="WebViewComponent"
           component={WebViewComponent}
+        />
+        <Stack.Screen
+          options={({ route }) => ({ title: route.params.name })}
+          name="AlertComponent"
+          component={AlertComponent}
+        />
+        <Stack.Screen
+          options={({ route }) => ({ title: route.params.name })}
+          name="ToastAndroidComponent"
+          component={ToastAndroidComponent}
+        />
+        <Stack.Screen
+          options={({ route }) => ({ title: route.params.name })}
+          name="ShareComponent"
+          component={ShareComponent}
+        />
+        <Stack.Screen
+          options={({ route }) => ({ title: route.params.name })}
+          name="ImageSliderComponent"
+          component={ImageSliderComponent}
+        />
+        <Stack.Screen
+          options={({ route }) => ({ title: route.params.name })}
+          name="CarouselImageSliderComponent"
+          component={CarouselImageSliderComponent}
         />
       </Stack.Navigator>
     </NavigationContainer>
