@@ -10,28 +10,48 @@ import {
 
 const DisplayAnImage = () => {
   const image = { uri: "https://reactjs.org/logo-og.png" };
-  return <SafeAreaView>
+  return (
+    <SafeAreaView>
       <ScrollView>
         <View style={styles.container}>
           <Text style={styles.textStyle}>Image From URL</Text>
           <Image style={styles.tinyLogo} source={image} />
           <Text style={styles.textStyle}>resizeMode: "stretch"</Text>
-          <Image style={[styles.stretch, styles.basic]} source={require("../assets/images/kar-ming-moo-Q_3WmguWgYg-unsplash.jpg")} />
+          <Image
+            style={[styles.stretch, styles.basic]}
+            source={require("../assets/images/kar-ming-moo-Q_3WmguWgYg-unsplash.jpg")}
+          />
           <Text style={styles.textStyle}>resizeMode: "contain"</Text>
-          <Image style={[styles.contain, styles.basic]} source={require("../assets/images/kar-ming-moo-Q_3WmguWgYg-unsplash.jpg")} />
+          <Image
+            style={[styles.contain, styles.basic]}
+            source={require("../assets/images/kar-ming-moo-Q_3WmguWgYg-unsplash.jpg")}
+          />
           <Text style={styles.textStyle}>resizeMode: "center"</Text>
-          <Image style={[styles.center, styles.basic]} source={require("../assets/images/kar-ming-moo-Q_3WmguWgYg-unsplash.jpg")} />
+          <Image
+            style={[styles.center, styles.basic]}
+            source={require("../assets/images/kar-ming-moo-Q_3WmguWgYg-unsplash.jpg")}
+          />
           <Text style={styles.textStyle}>resizeMode: "repeat"</Text>
-          <Image style={[styles.repeat, styles.basic]} source={require("../assets/images/kar-ming-moo-Q_3WmguWgYg-unsplash.jpg")} />
+          <Image
+            style={[styles.repeat, styles.basic]}
+            source={require("../assets/images/kar-ming-moo-Q_3WmguWgYg-unsplash.jpg")}
+          />
           <Text style={styles.textStyle}>resizeMode: "cover"</Text>
-          <Image style={[styles.cover, styles.basic]} source={require("../assets/images/kar-ming-moo-Q_3WmguWgYg-unsplash.jpg")} />
+          <Image
+            style={[styles.cover, styles.basic]}
+            source={require("../assets/images/kar-ming-moo-Q_3WmguWgYg-unsplash.jpg")}
+          />
           <Text style={styles.textStyle}>Round with shadow effect Image</Text>
           <View style={styles.ContainerImageProfile}>
-            <Image style={[styles.cover, styles.round]} source={require("../assets/images/kar-ming-moo-Q_3WmguWgYg-unsplash.jpg")} />
+            <Image
+              style={[styles.cover, styles.round]}
+              source={require("../assets/images/kar-ming-moo-Q_3WmguWgYg-unsplash.jpg")}
+            />
           </View>
         </View>
       </ScrollView>
-    </SafeAreaView>;
+    </SafeAreaView>
+  );
 };
 
 export default DisplayAnImage;

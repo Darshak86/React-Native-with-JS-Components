@@ -50,6 +50,12 @@ import ToastAndroidComponent from "../functional_component/ToastAndroidComponent
 import ShareComponent from "../functional_component/ShareComponent";
 import ImageSliderComponent from "../functional_component/ImageSliderComponent";
 import CarouselImageSliderComponent from "../functional_component/CarouselImageSliderComponent";
+import SwiperComponent from "../functional_component/SwiperComponent";
+import BottomSheetComponent from "../functional_component/BottomSheetComponent";
+import ModalComponent from "../functional_component/ModalComponent";
+import ContextMenuComponent from "../functional_component/ContextMenuComponent";
+import PopupDialogComponent from "../functional_component/PopupDialogComponent";
+import ImagePickerComponent from "../functional_component/ImagePickerComponent";
 import screens from "../config/screens";
 
 const index = () => {
@@ -303,6 +309,36 @@ const index = () => {
           options={({ route }) => ({ title: route.params.name })}
           name="CarouselImageSliderComponent"
           component={CarouselImageSliderComponent}
+        />
+        <Stack.Screen
+          options={({ route }) => ({ title: route.params.name })}
+          name="SwiperComponent"
+          component={SwiperComponent}
+        />
+        <Stack.Screen
+          options={({ route }) => ({ title: route.params.name })}
+          name="BottomSheetComponent"
+          component={BottomSheetComponent}
+        />
+        <Stack.Screen
+          options={({ route }) => ({ title: route.params.name })}
+          name="ModalComponent"
+          component={ModalComponent}
+        />
+        <Stack.Screen
+          options={({ route }) => ({ title: route.params.name })}
+          name="ContextMenuComponent"
+          component={ContextMenuComponent}
+        />
+        <Stack.Screen
+          options={({ route }) => ({ title: route.params.name })}
+          name="PopupDialogComponent"
+          component={PopupDialogComponent}
+        />
+        <Stack.Screen
+          options={({ route }) => ({ title: route.params.name })}
+          name="ImagePickerComponent"
+          component={ImagePickerComponent}
         />
       </Stack.Navigator>
     </NavigationContainer>

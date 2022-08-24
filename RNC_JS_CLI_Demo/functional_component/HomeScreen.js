@@ -250,6 +250,36 @@ const HomeScreen = ({ navigation }) => {
         title: `${title}`,
         name: `${title}`
       });
+    } else if (id == 47) {
+      return navigation.push("SwiperComponent", {
+        title: `${title}`,
+        name: `${title}`
+      });
+    } else if (id == 48) {
+      return navigation.push("BottomSheetComponent", {
+        title: `${title}`,
+        name: `${title}`
+      });
+    } else if (id == 49) {
+      return navigation.push("ModalComponent", {
+        title: `${title}`,
+        name: `${title}`
+      });
+    } else if (id == 50) {
+      return navigation.push("ContextMenuComponent", {
+        title: `${title}`,
+        name: `${title}`
+      });
+    } else if (id == 51) {
+      return navigation.push("PopupDialogComponent", {
+        title: `${title}`,
+        name: `${title}`
+      });
+    } else if (id == 52) {
+      return navigation.push("ImagePickerComponent", {
+        title: `${title}`,
+        name: `${title}`
+      });
     } else {
       return navigation.push("DefaultScreen", {
         title: `${title}`,

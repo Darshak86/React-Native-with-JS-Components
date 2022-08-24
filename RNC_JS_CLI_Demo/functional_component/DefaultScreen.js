@@ -1,36 +1,40 @@
-import { StyleSheet, Text, View } from "react-native";
-import React from "react";
-import { fontSize, fontFamily } from "../config/fonts";
-import getColor from "../config/colors";
+import React, { useState, useEffect, useRef } from "react";
+import { StyleSheet, Text, View, SafeAreaView } from "react-native";
+
+// https://
+// npm install 
+// # OR
+// yarn add 
 
 const DefaultScreen = ({ route, navigation }) => {
   const { title } = route.params;
-  return (
-    <View style={styles.base}>
-      <Text style={styles.item}>
-        {title}
-      </Text>
-    </View>
-  );
+  return <SafeAreaView style={{ flex: 1 }}>
+      <View style={styles.container}>
+        <Text style={styles.titleStyle}>
+          React Native : {title}
+        </Text>
+        <View style={styles.container}>
+          <Text style={styles.titleStyle}>
+            Content
+          </Text>
+        </View>
+      </View>
+    </SafeAreaView>;
 };
 
 export default DefaultScreen;
 
 const styles = StyleSheet.create({
-  base: {
+  container: {
     flex: 1,
+    backgroundColor: "#EBE7E7",
     justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: getColor("BLUE")
+    paddingVertical: 5,
+    paddingHorizontal: 5
   },
-  item: {
-    backgroundColor: getColor("LIGHT_GREEN"),
-    padding: 20,
-    marginVertical: 8,
-    marginHorizontal: 16,
-    color: getColor("BLACK"),
-    borderRadius: 10,
-    fontSize: fontSize(16),
-    fontFamily: fontFamily.POP_REG
+  titleStyle: {
+    fontSize: 18,
+    textAlign: "center",
+    color: "grey"
   }
 });
