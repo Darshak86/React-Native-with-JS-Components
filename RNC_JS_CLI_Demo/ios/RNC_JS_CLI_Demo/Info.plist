@@ -66,5 +66,9 @@
 		<string>Roboto-Medium.ttf</string>
 		<string>Roboto-Thin.ttf</string>
 	</array>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>app requires photo library access.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>app requires camera access.</string>
 </dict>
 </plist>

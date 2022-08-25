@@ -56,6 +56,9 @@ import ModalComponent from "../functional_component/ModalComponent";
 import ContextMenuComponent from "../functional_component/ContextMenuComponent";
 import PopupDialogComponent from "../functional_component/PopupDialogComponent";
 import ImagePickerComponent from "../functional_component/ImagePickerComponent";
+import MapViewComponent from "../functional_component/MapViewComponent";
+import GeoLocationsComponent from "../functional_component/GeoLocationsComponent";
+import SearchableDropdownComponent from "../functional_component/SearchableDropdownComponent";
 import screens from "../config/screens";
 
 const index = () => {
@@ -339,6 +342,21 @@ const index = () => {
           options={({ route }) => ({ title: route.params.name })}
           name="ImagePickerComponent"
           component={ImagePickerComponent}
+        />
+        <Stack.Screen
+          options={({ route }) => ({ title: route.params.name })}
+          name="MapViewComponent"
+          component={MapViewComponent}
+        />
+        <Stack.Screen
+          options={({ route }) => ({ title: route.params.name })}
+          name="GeoLocationsComponent"
+          component={GeoLocationsComponent}
+        />
+        <Stack.Screen
+          options={({ route }) => ({ title: route.params.name })}
+          name="SearchableDropdownComponent"
+          component={SearchableDropdownComponent}
         />
       </Stack.Navigator>
     </NavigationContainer>

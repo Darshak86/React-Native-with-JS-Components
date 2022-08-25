@@ -280,6 +280,21 @@ const HomeScreen = ({ navigation }) => {
         title: `${title}`,
         name: `${title}`
       });
+    } else if (id == 53) {
+      return navigation.push("MapViewComponent", {
+        title: `${title}`,
+        name: `${title}`
+      });
+    } else if (id == 54) {
+      return navigation.push("GeoLocationsComponent", {
+        title: `${title}`,
+        name: `${title}`
+      });
+    } else if (id == 55) {
+      return navigation.push("SearchableDropdownComponent", {
+        title: `${title}`,
+        name: `${title}`
+      });
     } else {
       return navigation.push("DefaultScreen", {
         title: `${title}`,

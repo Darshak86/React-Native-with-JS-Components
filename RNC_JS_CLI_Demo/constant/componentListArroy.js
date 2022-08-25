@@ -36,7 +36,7 @@ export const DATA = [
   { title: "Image" },
   { title: "Image Background" },
   { title: "Custom Icon" },
-  { title: "Picker" },
+  { title: "Picker / Drop Down" },
   { title: "Date Picker" },
   { title: "Get Current Date Time" },
   { title: "SeekBar / Slider" },
@@ -52,10 +52,8 @@ export const DATA = [
   { title: "Context Menus" },
   { title: "PopUp Dialog / Custom Popup View" },
   { title: "Camera / Image picker" },
-  { title: "Photo library multi selection" },
   { title: "MapView (google map / apple map)" },
   { title: "GeoLocations" },
-  { title: "Drop Down" },
   { title: "Searchable Drop Down" },
   { title: "Net Info / Reachability" },
   { title: "Spinner (Only Android)" },
@@ -118,6 +116,7 @@ export const DATA = [
   { title: "setting (Only ios)" },
   { title: "Progress Bar (Only iOS)" },
   { title: "Loader / Activity Indicator (Only iOS)" },
+  { title: "Photo library multi selection" },
 ];
 
 export const tableTypeData = [

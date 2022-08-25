@@ -10,14 +10,53 @@ import {
 import BottomSheet from "react-native-raw-bottom-sheet";
 import { Icon } from "react-native-elements";
 
-// https://
-// npm install
+// React Native Image Picker Tutorial | Pick from Camera, Gallery | Crop Photo
+// https://www.youtube.com/watch?v=3_ldEVWlL18
+// https://www.npmjs.com/package/react-native-image-crop-picker
+// npm install react-native-image-crop-picker
 // # OR
-// yarn add
+// yarn add react-native-image-crop-picker
+
+// #ios Permission
+{
+  /* <key>NSPhotoLibraryUsageDescription</key>
+	  <string>app requires photo library access.</string>
+	  <key>NSCameraUsageDescription</key>
+	  <string>app requires camera access.</string> */
+}
+
+import ImagePicker from "react-native-image-crop-picker";
 
 const ImagePickerComponent = ({ route, navigation }) => {
   const { title } = route.params;
   const bottomSheetRef = useRef();
+  const [imageShow, setImageShow] = useState("");
+  const defaultImage = require("../assets/images/profile.jpg");
+
+  const takePhotoFromCamera = () => {
+    ImagePicker.openCamera({
+      width: 300,
+      height: 300,
+      cropping: true
+    }).then(image => {
+      console.log(image);
+      setImageShow(image.path);
+    });
+    bottomSheetRef.current.close();
+  };
+
+  const choosePhotoFromGallery = () => {
+    ImagePicker.openPicker({
+      width: 300,
+      height: 300,
+      cropping: true
+    }).then(image => {
+      console.log(image);
+      setImageShow(image.path);
+    });
+    bottomSheetRef.current.close();
+  };
+
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View style={styles.container}>
@@ -28,7 +67,7 @@ const ImagePickerComponent = ({ route, navigation }) => {
           <View style={styles.ContainerImageProfile}>
             <Image
               style={[styles.cover, styles.round]}
-              source={require("../assets/images/kar-ming-moo-Q_3WmguWgYg-unsplash.jpg")}
+              source={imageShow == "" ? defaultImage : { uri: imageShow }}
             />
           </View>
           <TouchableOpacity
@@ -67,17 +106,13 @@ const ImagePickerComponent = ({ route, navigation }) => {
               <View style={styles.messageButtonContainer}>
                 <TouchableOpacity
                   style={styles.messageButton}
-                  onPress={() => {
-                    bottomSheetRef.current.close();
-                  }}
+                  onPress={takePhotoFromCamera}
                 >
                   <Text style={styles.messageButtonText}>Take Photo</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
                   style={styles.messageButton}
-                  onPress={() => {
-                    bottomSheetRef.current.close();
-                  }}
+                  onPress={choosePhotoFromGallery}
                 >
                   <Text style={styles.messageButtonText}>
                     Choose From Library
@@ -114,9 +149,9 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#EBE7E7",
     // justifyContent: "center",
-    alignItems : "center",
+    alignItems: "center",
     paddingVertical: 5,
-    paddingHorizontal: 5,
+    paddingHorizontal: 5
   },
   titleStyle: {
     fontSize: 18,
@@ -173,7 +208,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     borderColor: "#3385ff",
     marginVertical: 10,
-    marginHorizontal :20
+    marginHorizontal: 20
   },
   messageButtonText: {
     color: "#3385ff",
@@ -197,11 +232,11 @@ const styles = StyleSheet.create({
     resizeMode: "cover"
   },
   ContainerImageProfile: {
-    alignItems : "center",
-    justifyContent : "center",
+    alignItems: "center",
+    justifyContent: "center",
     width: 204,
     height: 204,
-    backgroundColor: "#EBFC07",
+    backgroundColor: "#BEBEB6",
     shadowColor: "black",
     shadowOffset: {
       width: 2,
@@ -211,7 +246,6 @@ const styles = StyleSheet.create({
     shadowRadius: 10,
     elevation: 3,
     borderRadius: 102,
-    margin: 50,
-
+    margin: 50
   }
 });
